@@ -12,7 +12,7 @@ client = Bot(command_prefix=BOT_PREFIX)
 
 
 @client.command(name='pic')
-                #pass_context=True)
+              
 async def pics(name):
 
     await client.say(Pics.pics(name))
