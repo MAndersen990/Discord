@@ -1,7 +1,6 @@
 import asyncio
 from discord import Game
 from discord.ext.commands import Bot
-#import Get_Corp_List
 import Pics
 import project_ids
 
@@ -17,23 +16,15 @@ client = Bot(command_prefix=BOT_PREFIX)
 async def pics(name):
 
     await client.say(Pics.pics(name))
-    #await client.say(context.message.author.mention)
+   
 
 @client.command(name='gif')
-                #pass_context=True)
+                
 async def pics(name):
 
     await client.say(Pics.gifs(name))
-    #await client.say(context.message.author.mention)
-
-# need to find a way to get discord to recognize spacing between command arguments
-#Work in progress
-#@client.command(name='corp')
-#async def corp_list(thing,name):
-   # await client.say(Get_Corp_List.stuff(thing,name))
-
-
-
+   
+  
 @client.event
 async def on_ready():
     await client.change_presence(game=Game(name="with humans"))
